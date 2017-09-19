@@ -1,17 +1,16 @@
 <div class="b-events-container">
   <h1>Eventos</h1>
-  <div class="b-event">
-    <h2 class="b-event__title">
-    </h2>
-  </div>
-
-
-  <div class="b-event card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h4 class="b-event__title card-title">Card title</h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="row">
+    <div class="col-4" *ngFor="let evento of eventos">
+      <div class="b-event card bg-light">
+        <img class="card-img-top" src="{{ evento.thumbnail | changeImageURL }}" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="b-event__title card-title">{{evento.title}}</h4>
+          <p class="card-text">{{ evento.summary }}</p>
+          <a href="#" class="btn btn-primary">Ver</a>
+        </div>
+      </div>
     </div>
   </div>
+
 </div>

@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { EventosService } from './eventos/services/eventos.service';
+import { ChangeImageURLPipe } from './change-image-url.pipe';
 
 @NgModule( {
   declarations: [
     AppComponent,
-    EventosComponent
+    EventosComponent,
+    ChangeImageURLPipe
   ],
   imports: [
     BrowserModule,
